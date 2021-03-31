@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Main path="/" />
         <Edit path="/edit/:id" />
-        {/* <New path="/new" /> */}
+        <New path="/new" />
       </Router>
     </div>
   );
