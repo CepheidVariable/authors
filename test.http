@@ -6,9 +6,9 @@ POST http://localhost:8000/api/authors HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "Testing name",
+    "name": "Testing name"
 }
 
 ###
 
-DELETE http://localhost:8000/api/authors/6062507074f6cd2a2c8e07da HTTP/1.1
+DELETE http://localhost:8000/api/authors/6064cd261f102c2ff846f13d HTTP/1.1
