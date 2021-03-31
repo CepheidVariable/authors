@@ -2,7 +2,7 @@ const Author = require('../models/author.model');
 
 module.exports = {
     index: (req, res) => {
-        Author.find()
+        Author.find().collation({locale: "en" }).sort({name: 1})
             .then(data => res.json({results: data}))
             .catch(err => res.status(404).json({errors: err.errors}))
     },
