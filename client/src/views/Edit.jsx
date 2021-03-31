@@ -11,7 +11,7 @@ const Edit = props => {
         axios.get('http://localhost:8000/api/authors/' + props.id)
             .then(res => setAuthor(res.data.results[0]))
             .catch(err => {
-                console.log(err); //add 404 redirect
+                navigate('/404'); //add 404 redirect
             });
     }, [props]);
 
