@@ -4,7 +4,7 @@ import { Link } from "@reach/router";
 
 const Main = () =>{
     const [authors, setAuthors] = useState();
-    const [errors, setErrors] = useState();
+    const [errors, setErrors] = useState(false);
 
     useEffect( () => {
         axios.get('http://localhost:8000/api/authors')

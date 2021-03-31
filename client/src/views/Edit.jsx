@@ -5,12 +5,14 @@ import AuthorForm from '../components/AuthorForm';
 
 const Edit = props => {
     const [author, setAuthor] = useState();
-    const [errors, setErrors] = useState();
+    const [errors, setErrors] = useState(false);
 
     useEffect( () => {
         axios.get('http://localhost:8000/api/authors/' + props.id)
             .then(res => setAuthor(res.data.results[0]))
-            .catch(err => setErrors(err.response.data.errors));
+            .catch(err => {
+                console.log(err); //add 404 redirect
+            });
     }, [props]);
 
     const handleChange = e => {
@@ -22,9 +24,11 @@ const Edit = props => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        axios.put('http://localhost:8000/api/authors/' + props.ids, author)
+        axios.put('http://localhost:8000/api/authors/' + props.id, author)
             .then(() => navigate('/'))
-            .catch(err => setErrors(err.response.data.errors));
+            .catch(err => {
+                setErrors(err.response.data.errors)
+            });
     }
 
     return (

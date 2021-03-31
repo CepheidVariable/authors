@@ -29,3 +29,5 @@ const AuthorForm = props => {
         </form>
     )
 }
+
+export default AuthorForm;
