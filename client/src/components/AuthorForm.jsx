@@ -1,3 +1,5 @@
+import { Link } from "@reach/router";
+
 const AuthorForm = props => {
     const {inputs, action, submitValue, onChangeHandler, onSubmitHandler, errors } = props;
 
@@ -18,10 +20,13 @@ const AuthorForm = props => {
                 <span className="text-danger offset-3 pl-3">{errors.name && errors.name.message}</span>
             </div>
             <div className="form-group row">
+            <div className="col-sm-2">
+                <Link to='/' className="form-control btn btn-dark">Cancel</Link>
+            </div>
                 <div className="col-sm-2">
                     <input
                         type="submit"
-                        className="form-control btn btn-dark"
+                        className="form-control btn btn-primary"
                         value={submitValue}
                     />
                 </div>
