@@ -30,7 +30,7 @@ const Edit = props => {
     return (
         author ?
         <AuthorForm
-            inputs={product}
+            inputs={author}
             action={"Edit Author"}
             submitValue="Update"
             onChangeHandler={handleChange}
