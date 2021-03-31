@@ -1,16 +1,14 @@
-GET http://localhost:8000/api/widgets HTTP/1.1
+GET http://localhost:8000/api/authors HTTP/1.1
 
 ###
 
-POST http://localhost:8000/api/widgets HTTP/1.1
+POST http://localhost:8000/api/authors HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Testing title",
-    "price": 0.01,
-    "description": "This is a test description"
+    "name": "Testing name",
 }
 
 ###
 
-DELETE http://localhost:8000/api/widgets/6062507074f6cd2a2c8e07da HTTP/1.1
+DELETE http://localhost:8000/api/authors/6062507074f6cd2a2c8e07da HTTP/1.1
