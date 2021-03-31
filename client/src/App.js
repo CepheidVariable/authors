@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <Router>
         <Main path="/" />
-        {/* <Edit path="/edit/:id" />
-        <New path="/new" /> */}
+        <Edit path="/edit/:id" />
+        {/* <New path="/new" /> */}
       </Router>
     </div>
   );

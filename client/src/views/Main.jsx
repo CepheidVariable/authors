@@ -34,7 +34,7 @@ const Main = () =>{
                         <tr key={idx}>
                             <td>{a.name}</td>
                             <td>
-                                <button className="btn btn-sm btn-secondary">Edit</button>
+                                <Link to={`/edit/${a._id}`} className="btn btn-sm btn-secondary">Edit</Link>
                                 <button onClick={() => handleDelete(a._id)} className="btn btn-sm btn-danger ml-2">Delete</button>
                             </td>
                         </tr>
